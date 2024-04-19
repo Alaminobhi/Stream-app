@@ -31,7 +31,7 @@ const MovieListComponent = () => {
       <div className="grid gap-2 grid-cols-2 m-5 shadow-2xl">
         
       {
-      videolist?.map(it =><Item item={it}></Item>)
+      videolist?.map((it, index) =><Item key={index} item={it}></Item>)
               }
       </div>
     </div>

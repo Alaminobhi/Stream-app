@@ -1,11 +1,6 @@
 "use client"
 /* eslint-disable no-mixed-spaces-and-tabs */
-import { useEffect, useState} from "react";
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+import { useState} from "react";
 import Image from "next/image";
 
 
@@ -29,21 +24,6 @@ const Radio = () => {
 	}) 
 	.catch(error => console.error(error)); 
 
-	// useEffect(() => {
-	// 	// fetch data
-	// 	const dataFetch = async () => {
-	// 	  const data = await (
-	// 		await fetch(
-	// 		  url
-	// 		)
-	// 	  ).json();
-	
-	// 	  // set state when the data received
-	// 	  setStations(data);
-	// 	};
-	
-	// 	dataFetch();
-	//   }, []);
 	
    const RadioPlay = (e) =>{
 	{stations && stations?.map(station=>{
@@ -61,7 +41,7 @@ const Radio = () => {
 			<div class="-mt-px flex divide-x divide-gray-200 ">
 				<div class="flex w-0 flex-1">
 			
-				<img class="mx-auto h-32 w-32 flex-shrink-0 rounded-full" 
+				<Image class="mx-auto h-32 w-32 flex-shrink-0 rounded-full" 
 				alt='https://dhakafm904.com/assets/images/logo.png' src={item?.favicon} cap={item.toString()}/>
 
 				</div>
@@ -86,7 +66,7 @@ const Radio = () => {
 			<div class="-mt-px flex divide-x divide-gray-200 ">
 				<div class="flex w-0 flex-1">
 			
-				<img class="mx-auto h-32 w-32 flex-shrink-0 rounded-full" 
+				<Image class="mx-auto h-32 w-32 flex-shrink-0 rounded-full" 
 				alt='https://dhakafm904.com/assets/images/logo.png' src={station.favicon} cap={item.toString()}/>
 
 				</div>
