@@ -40,7 +40,6 @@ const Studio = () => {
   const mediaRecorder = useRef()
   const stream = useRef(null)
   let liveStream
-  let tempStream = new MediaStream();
 
   const viewCountTimer = 1000 * 60 * 1
   // Use polling every 30 seconds
@@ -89,7 +88,6 @@ const Studio = () => {
       
     camera()
 
-    videoRef.current.srcObject = tempStream.remoteStream
   }, [])
 
   async function screen() {
