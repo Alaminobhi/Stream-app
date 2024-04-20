@@ -371,6 +371,7 @@ const Studio = () => {
     // socket.current.close()
     // Set the streaming status to false
     setIsStreaming(false)
+    setStatusMessage('Live stream is Not start');
 
     setOpenModal(true)
     // Listen for the confirmation message from the server
