@@ -20,7 +20,7 @@ const Page = () => {
     const startstream = async (event) => {
       event.preventDefault();
       try {
-      let url = new URL('http://103.191.50.22/livestream');
+      let url = new URL(process.env.NEXT_PUBLIC_HOST_URL_STREAM);
       url.search = new URLSearchParams(data);
 
       const response = await fetch(url);

@@ -8,8 +8,9 @@ const MovieListComponent = () => {
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        const url = new URL('http://103.191.50.22/videolist');
-        const response = await fetch(url);
+        // const url = new URL(process.env.HOST_URL_LIST);
+        // console.log(url);
+        const response = await fetch(process.env.NEXT_PUBLIC_HOST_URL_LIST);
         const movies = await response.json();
         setVideolist(movies);
         console.log(movies);
