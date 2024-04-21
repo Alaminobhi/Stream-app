@@ -10,7 +10,8 @@ const MovieListComponent = () => {
       try {
         // const url = new URL(process.env.HOST_URL_LIST);
         // console.log(url);
-        const response = await fetch(process.env.NEXT_PUBLIC_HOST_URL_LIST);
+        const url = 'http://103.191.50.22/videolist'
+        const response = await fetch(url);
         const movies = await response.json();
         setVideolist(movies);
         console.log(movies);

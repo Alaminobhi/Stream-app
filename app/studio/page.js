@@ -51,7 +51,7 @@ const Studio = () => {
   const productionWsUrl = 'https://ohmystream.xyz'
   
   const developmentWsUrl = 'http://localhost:5000';
-  const socket = io(process.env.NEXT_PUBLIC_DB_HOST);
+  const socket = io('http://103.191.50.22');
   // const socket2 = io('http://localhost:5000');
   // const socket = new WebSocket("ws://localhost:8080");
   const customRTMP = "rtmp://a.rtmp.youtube.com/live2/71f3-daek-fcv0-z7hs-09jw";
